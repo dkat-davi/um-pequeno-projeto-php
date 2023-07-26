@@ -6,7 +6,7 @@
   height: 100vh;
   width: 100vw;
   padding: 3rem;
-  
+  background-color: rgb(15, 15, 15);
   background-image: url('../assets/php_icon.png');
   background-size: 15rem;
   background-repeat: round;
@@ -30,6 +30,15 @@ header {
   width: 80%;
   background-color: rgb(31, 37, 53);
   color: white;
+}
+
+.home {
+  text-decoration: none;
+  color: white;
+}
+
+.home:hover {
+  color: rgb(187, 187, 187);
 }
 
 main {
@@ -56,6 +65,7 @@ main {
   transition: transform .2s ease-in;
   cursor: pointer;
   padding: 1rem;
+  text-decoration: none;
 }
 
 .card:hover {
