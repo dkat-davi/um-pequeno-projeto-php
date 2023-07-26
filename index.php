@@ -1,3 +1,8 @@
+<?php
+  require 'components/header.php';
+  require 'components/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,13 +16,12 @@
 <body>
   <div class="container">
     <div class="blur"></div>
-    <header>
-      <h1>Desenvolvimento Web</h1>
-      <a href="#" class="home"> Home |^^^|</a>
-    </header>
+    <?php
+      DefaultHeader("Desenvolvimento Web", "#")
+    ?>
     <main>
       <a href="pages/html-generator/index.php" class="card">
-        <p>Gerador de inputs HTML</p>
+        <p>Gerador de HTML</p>
       </a>
       <a href="pages/imc-table/index.php" class="card">
         <p>Tabela de IMC</p>
@@ -29,9 +33,9 @@
         <p>Simulador de Investimentos</p>
       </a>
     </main>
-    <footer>
-      <p>Desenvolvimento Web 2023 - Davi Kalel & Edson Júnior</p>
-    </footer>
+    <?php
+      DefaultFooter();
+    ?>
   </div>
 </body>
 </html>
