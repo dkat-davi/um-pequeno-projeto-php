@@ -31,9 +31,6 @@
     ?>
 
     <main>
-      <?php
-        echo rand(1, 2);
-      ?>
       <div id="input">
         <form method="get" id="html-generator">
           <h2>Critérios para geração</h2>
@@ -173,7 +170,42 @@
             ?>
           </div>
           <div id="code-result">
-            
+            <?php
+              if($type !== '') {
+                for ($i=1; $i <= $quantidade; $i++) { 
+                  switch ($type) {
+                    
+                    case 'text':
+                      echo "<div>&lt;input type=\"{$type}\" name=\"senha{$i}\" id=\"senha{$i}\"&gt;</div>";
+                      break;
+
+                    case 'password':
+                      echo "<div>&lt;input type=\"{$type}\" name=\"text{$i}\" id=\"text{$i}\"&gt;</div>";
+                      break;
+
+                    case 'button':
+                      echo "<div>&lt;input type=\"{$type}\" name=\"botao{$i}\" id=\"botao{$i}\" value=\"Botão {$i}\"></div>";
+                      break;
+                    
+                    case 'radio':
+                      echo "<div style=\"display:flex;\">&lt;input type=\"{$type}\" name=\"radio{$i}\" id=\"radio{$i}\" value=\"radio{$i}\"&gt;&lt;label for=\"radio{$i}\"&gt;Radio&nbsp;{$i}&lt;/label&gt;</div>";
+                      break;
+
+                    case 'checkbox':
+                      echo "<div style=\"display:flex;\">&lt;input type=\"{$type}\" name=\"checkbox{$i}\" id=\"checkbox{$i}\" value=\"checkbox{$i}\"&gt;&lt;label for=\"checkbox{$i}\"&gt;Caixa&nbsp;de&nbsp;Seleção&nbsp;{$i}&lt;/label&gt;</div>";
+                      break;
+
+                    case 'range':
+                      echo "<div style=\"display:flex;\">&lt;input type=\"{$type}\" name=\"range{$i}\" id=\"range{$i}\" value=\"".mt_rand($i, $i * 10)."\" min=\"0\" max=\"100\"&gt;&lt;label for=\"range{$i}\"&gt;Faixa&nbsp;{$i}&lt;/label&gt;</div>";
+                      break;
+                    
+                    default:
+                      break;
+                  }
+                  
+                }
+              }
+            ?>
           </div>
         </fieldset>
       </div>

@@ -41,3 +41,10 @@ fieldset {
   max-width: min-content;
   gap: .5rem;
 }
+
+#code-result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
