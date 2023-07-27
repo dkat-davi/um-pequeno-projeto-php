@@ -1,6 +1,7 @@
 <?php
-  require 'components/header.php';
-  require 'components/footer.php';
+  include 'components/header.php';
+  include 'components/footer.php';
+  include 'components/card.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,18 +21,12 @@
       DefaultHeader("Desenvolvimento Web", "#")
     ?>
     <main>
-      <a href="pages/html-generator/index.php" class="card">
-        <p>Gerador de HTML</p>
-      </a>
-      <a href="pages/imc-table/index.php" class="card">
-        <p>Tabela de IMC</p>
-      </a>
-      <a href="pages/links-quiz/index.php" class="card">
-        <p>Questionário de links</p>
-      </a>
-      <a href="pages/investiment-simulator/index.php" class="card">
-        <p>Simulador de Investimentos</p>
-      </a>
+      <?php
+        Card('Gerador de HTML', 'pages/html-generator/index.php');
+        Card('Tabela de IMC', 'pages/imc-table/index.php');
+        Card('Questionário de links', 'pages/links-quiz/index.php');
+        Card('Simulador de Investimentos', 'pages/investiment-simulator/index.php');
+      ?>
     </main>
     <?php
       DefaultFooter();

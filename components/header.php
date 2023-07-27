@@ -1,9 +1,9 @@
 <?php
-  function DefaultHeader($header, $link) {
+  function DefaultHeader($header, $redirectTo) {
     echo 
     '<header>'. 
       '<h1>'. $header . '</h1>'.
-      '<a href="'. $link .'" class="home"> Home |^^^|</a>'.
+      '<a href="'. $redirectTo .'" class="home"> Home |^^^|</a>'.
     '</header>';
   }
 ?>
