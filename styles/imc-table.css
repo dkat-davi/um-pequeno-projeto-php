@@ -1,0 +1,50 @@
+main {
+  margin: 1rem 0;
+  overflow-x: scroll;
+  background-color: var(--secondary-color);
+  padding: .5rem;
+  border-radius: 1rem;
+  max-height: 70vh;
+}
+
+main::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--secondary-color);
+}
+
+thead th {
+  padding: .5rem 0;
+}
+
+tbody th {
+  padding: 0 .5rem;
+  position: sticky;
+  left: 0;
+  background-color: var(--secondary-color);
+}
+
+td {
+  border: .2rem solid var(--secondary-color);
+  width: 10%;
+}
+
+th {
+  color: white;
+}
+
+
