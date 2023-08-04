@@ -24,7 +24,7 @@
       <?php
         Card('Gerador de HTML', 'pages/html-generator/index.php');
         Card('Tabela de IMC', 'pages/imc-table/index.php');
-        Card('Questionário de links', 'pages/links-quiz/index.php');
+        Card('Questionário de links', 'pages/links-quiz/question-a.php');
         Card('Simulador de Investimentos', 'pages/investiment-simulator/index.php');
       ?>
     </main>
