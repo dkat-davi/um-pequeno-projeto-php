@@ -75,9 +75,27 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 2rem;
   color: var(--text-color);
   background-color: rgb(31, 37, 53);
   width: 90%;
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 800px){
+  .container {
+    background-color: rgb(9, 14, 27);
+    padding: 3rem .5rem;
+  }
+
+  header, main, footer {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 575px){
+  .container {
+    background-image: none;
+  }
 }

@@ -11,15 +11,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EAD Week</title>
 
-  <link rel="stylesheet" href="styles/home.css" type="text/css">
   <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css" type="text/css">
 </head>
 <body>
   <div class="container">
     <div class="blur"></div>
-    <?php
-      DefaultHeader("Desenvolvimento Web", "#")
-    ?>
+    <header>
+      <h1>Desenvolvimento Web</h1>
+    </header>
     <main>
       <?php
         Card('Gerador de HTML', 'pages/html-generator/index.php');

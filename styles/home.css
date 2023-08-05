@@ -1,3 +1,8 @@
+header {
+  justify-content: center;
+  align-items: center;
+}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -25,5 +30,25 @@ main {
 .card:hover {
   background-color: rgb(39, 47, 66);
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 800px){
+  main {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1rem 0;
+    width: 98%;
+  }
+
+  .card {
+    flex: 1;
+    width: 100%;
+  }
+
+  .card:hover {
+    background-color: rgb(39, 47, 66);
+    transform: scale(1.01);
+  }
 }
 

@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="../../styles/html-generator.css" type="text/css">
   <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="container">
@@ -192,7 +193,7 @@
                       break;
 
                     case 'checkbox':
-                      echo "<div style=\"display:flex;\">&lt;input type=\"{$type}\" name=\"checkbox{$i}\" id=\"checkbox{$i}\" value=\"checkbox{$i}\"&gt;&lt;label for=\"checkbox{$i}\"&gt;Caixa&nbsp;de&nbsp;Seleção&nbsp;{$i}&lt;/label&gt;</div>";
+                      echo "<div style=\"display:flex;\">&lt;input type=\"{$type}\" name=\"checkbox{$i}\" id=\"checkbox{$i}\" value=\"checkbox{$i}\"&gt;&lt;label for=\"checkbox{$i}\"&gt;Caixa&nbsp;deSeleção&nbsp;{$i} &lt;/label&gt;</div>";
                       break;
 
                     case 'range':
