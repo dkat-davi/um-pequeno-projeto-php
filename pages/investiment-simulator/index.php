@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="../../styles/global.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+<?php
+  function calcularDados($ini, $ap, $porc) {
+    $rendimento = (($porc / 100) * ($ini + $ap));
+    $total = $ini + $ap + $rendimento;
+
+    return [
+      'rendimento' => $rendimento,
+      'total' => $total
+    ];
+  }
+?>
+
 <body>
   <div class="container">
     <div class="blur"></div>
@@ -39,7 +52,7 @@
       <form method="get">
         <fieldset>
           <legend>Parâmetros</legend>
-          <?= "<label>Aporte inicial (R$): <input type=\"number\" name=\"aporteini\" value=\"{$aporteini}\" max=\"999999.99\"> [até R$ 999.999,99]</label>"?>
+          <?= "<label>Aporte inicial (R$):<input type=\"number\" name=\"aporteini\" value=\"{$aporteini}\" max=\"999999.99\"> [até R$ 999.999,99]</label>"?>
           
           <?= "<label>Período (meses): <input type=\"number\" name=\"periodo\" value=\"{$periodo}\" min=\"1\" max=\"480\"> [1 a 480]</label>" ?>
           
@@ -70,20 +83,20 @@
         
                   $inicial = $aporteini;
                   $aporte = 0;
-        
+
                   for ($i=1; $i <= $periodo; $i++) {
-                    $rendimento = (($porcentagem / 100) * ($inicial + $aporte));
-                    $total = $inicial + $aporte + $rendimento;
+                    $dados = calcularDados($inicial, $aporte, $porcentagem);
+                    
                     echo
                       "<tr>
                         <td>{$i}</td>
                         <td>". number_format($inicial, 2) ."</td>
                         <td>". ($i === 1 ? '---' : number_format($aporte, 2)) ."</td>
-                        <td>". number_format($rendimento, 2) ."</td>
-                        <td> ". number_format($total, 2) ." </td>
+                        <td>". number_format($dados['rendimento'], 2) ."</td>
+                        <td> ". number_format($dados['total'], 2) ." </td>
                       </tr>";
                       $aporte = $aportmen;
-                      $inicial = $total;
+                      $inicial = $dados['total'];
                   }
                   echo "</tbody>";
                 }

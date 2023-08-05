@@ -116,10 +116,10 @@
           break;
       }
 
-      $resp1 = $resp1 === '2' ? 'OK' : 'NOT OK';
-      $resp2 = $resp2 === '4' ? 'OK' : 'NOT OK';
-      $resp3 = $resp3 === '1' ? 'OK' : 'NOT OK';
-      $resp4 = $resp4 === '5' ? 'OK' : 'NOT OK';
+      $resp1 = $resp1 === '2' ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fas fa-times-circle"></i>';
+      $resp2 = $resp2 === '4' ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fas fa-times-circle"></i>';
+      $resp3 = $resp3 === '1' ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fas fa-times-circle"></i>';
+      $resp4 = $resp4 === '5' ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fas fa-times-circle"></i>';
     ?>
 
     <main>

@@ -30,9 +30,18 @@ main div {
 }
 
 table {
-  width: 60%;
+  min-width: 70rem;
   border-collapse: collapse;
   text-align: center;
+  border:  1px solid white;
+}
+
+tr:hover {
+  background-color: var(--secondary-color);
+}
+
+thead {
+  background-color: var(--secondary-color);
 }
 
 tr {
@@ -41,5 +50,21 @@ tr {
 }
 
 td, th {
-  padding: .5rem 0;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 575px){
+  main div {
+    overflow-x: scroll;
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px){
+  main div {
+    overflow-x: scroll;
+    justify-content: start;
+    align-items: center;
+  }
 }

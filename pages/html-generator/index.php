@@ -18,7 +18,7 @@
   <div class="container">
     <div class="blur"></div>
     <?php
-      DefaultHeader('HTML Generator', '../../index.php')
+      DefaultHeader('Gerador de HTML', '../../index.php')
     ?>
 
     <?php
